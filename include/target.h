@@ -3,7 +3,7 @@
 
 
 #if defined(TARGET_OLIMEX)
-    #define DPIN_LED LED_BUILTIN
+    #define DPIN_LED PA_5
     #define LED_INVERTED 1
     #define APIN_VBAT A1
     #define USART_INPUT USART2                                             // UART2 RX=PA3 TX=PA2
