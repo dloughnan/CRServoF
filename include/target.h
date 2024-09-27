@@ -1,8 +1,13 @@
 #pragma once
 
+#if defined(TARGET_DISCO)
+    #define DPIN_LED PD_12
+    #define LED_INVERTED 1
+    #define APIN_VBAT A1
+    #define USART_INPUT USART2                                             // UART2 RX=PA3 TX=PA2
+    #define OUTPUT_PIN_MAP PA_0, PA_1, PA_2, PA_3, PA_6, PA_7, PB_0, PB_1 // TIM2 CH1-4, TIM3CH1-4
 
-
-#if defined(TARGET_OLIMEX)
+#elif defined(TARGET_OLIMEX)
     #define DPIN_LED PA_5
     #define LED_INVERTED 1
     #define APIN_VBAT A1

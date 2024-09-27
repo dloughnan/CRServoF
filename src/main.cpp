@@ -409,7 +409,8 @@ static void setupGpio()
 void setup()
 {
     Serial.begin(115200);
-
+    while(!Serial);
+    Serial.println("Connected");
     setupGpio();
     setupCrsf();
 }
